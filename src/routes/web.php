@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Htt\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [indexController::class, 'index']);
+
+//確認ページ、サンクスページ、管理画面、ユーザ登録ページ、ログインページ
+//Route::get('/confirm', [indexController::class, 'index']);
+//Route::get('/thanks', [indexController::class, 'index']);
+//Route::get('/admin', [indexController::class, 'index']);
+//Route::get('/register', [indexController::class, 'index']);
+//Route::get('/login', [indexController::class, 'index']);
