@@ -9,9 +9,10 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form">
+    <form class="contact-form" action='/contacts' method="post">
+        @csrf
 
-/* 名前　*/
+{{-- 名前 --}}
         <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">お名前</span>
@@ -28,7 +29,7 @@
           </div>
         </div>
 
-/*　性別　*/
+{{-- 性別 --}}
 　　<div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">性別</span>
@@ -55,7 +56,7 @@
 
 　　
 
-/*  メアド　　*/
+{{-- メアド --}}
         <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">メールアドレス</span>
@@ -72,7 +73,7 @@
         </div>
 
 　
-/* 　電話番号　 */
+{{-- 電話 --}}
         <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">電話番号</span>
@@ -92,8 +93,8 @@
 
 
 
-/*　　住所　　*/
-　　 <div class="form__group">
+{{-- 住所 --}}
+    <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">住所</span>
             <span class="form__label--required">※</span>
