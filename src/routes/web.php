@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Htt\Controllers\IndexController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,7 @@ use App\Htt\Controllers\IndexController;
 |
 */
 
-Route::get('/', [indexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
 
 //確認ページ、サンクスページ、管理画面、ユーザ登録ページ、ログインページ
 //Route::get('/confirm', [indexController::class, 'index']);
