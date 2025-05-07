@@ -13,19 +13,72 @@ class IndexController extends Controller
         return view('index');
     }
 
+    public function confirm(Request $request)
+    {
+        $contact = $request->only([
+        'first_name',
+        'last_name',
+        'gender',
+        'email',
+        'tel',
+        'address',
+        'building',
+        'detail',
+    ]);
+
+        return view('confirm', compact('contact'));
+    }
+
+
+
     public function store(Request $request)
     {
-        $contact = $request->
-        only(['first_name',
-            'last_name',
-            'gender',
-            'email',
-            'tel',
-            'address',
-            'building',
-            'detail',]);
+        $tel = $request->input('area-code') . '-' . $request->input('first_part') . '-' . $request->input('second_part');
 
+    $contact = [
+        'first_name'  => $request->input('first-name'),
+        'last_name'   => $request->input('last-name'),
+        'gender'      => $this->convertGender($request->input('gender')),
+        'email'       => $request->input('email'),
+        'tel'         => $tel,
+        'address'     => $request->input('address'),
+        'building'    => $request->input('building') ?? '',  // ないなら空文字を入れる
+        'detail'      => $request->input('content'),
+        'category_id' => $this->convertCategory($request->input('category')), // 文字→IDに変換
+    ];
+        
         Contact::create($contact);
-         return view ('thanks');
+        return view('thanks');
     }
+
+private function convertGender($gender)
+{
+    switch ($gender) {
+        case 'male':
+            return 1; // 男性
+        case 'female':
+            return 2; // 女性
+        default:
+            return 3; // その他
+    }
+}
+
+private function convertCategory($category)
+{
+    switch ($category) {
+        case 'product':
+            return 1; // 商品のお届けについて
+        case 'service':
+            return 2; // 商品の交換について
+        case 'support':
+            return 3; // 商品トラブル
+        case 'shop':
+            return 4; // ショップへのお問い合わせ
+        case 'other':
+            return 5; // その他サービスについて
+        default:
+            return 5; // デフォルトは「その他」
+    }
+}
+
 }

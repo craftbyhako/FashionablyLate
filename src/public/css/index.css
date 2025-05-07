@@ -1,3 +1,39 @@
-.main {
-    margin-top: 60px;
+.contact-form__content {
+    margin-top: 100px;
+}
+
+.contact-form__heading {
+    margin: 0 auto;
+    color: #8B7969;
+    font-family: 'Inika';
+}
+
+.form__group-title {
+    display: flex;
+    align-items: center;
+    /* 縦方向の中央揃え */
+}
+
+.form__label--item {
+    margin-right: 8px;
+    /* 「お名前」と「※」の間にスペースを作る */
+}
+
+.form__input--text {
+    display: flex;
+    /* 入力フォームを横並びにする */
+}
+
+.form__input--text input {
+    margin-right: 10px;
+    /* 2つの入力フォームの間にスペースを作る */
+    padding: 8px;
+    /* 入力フィールドの内側にスペース */
+    border: 1px solid #ccc;
+    /* 入力フィールドの枠線 */
+}
+
+.form__input--text input:last-child {
+    margin-right: 0;
+    /* 最後のinputには右マージンをつけない */
 }
