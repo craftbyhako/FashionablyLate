@@ -16,8 +16,11 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index']);
 
-Route::post('/contacts', [IndexController::class, 'store']);
+Route::post('/confirm', [IndexController::class, 'confirm']);
 
+Route::post('/store', [IndexController::class, 'store']);
+
+Route::get('/thanks', [IndexController::class, 'thanks']);
 //確認ページ、サンクスページ、管理画面、ユーザ登録ページ、ログインページ
 //Route::get('/confirm', [indexController::class, 'index']);
 //Route::get('/thanks', [indexController::class, 'index']);

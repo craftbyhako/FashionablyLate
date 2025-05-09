@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     @yield('css')
+      <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
