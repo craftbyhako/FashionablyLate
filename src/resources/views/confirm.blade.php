@@ -11,8 +11,25 @@
       <div class="confirm__heading">
         <h2>Confirm</h2>
       </div>
-      <form class="form" action="/store" method="post">
+      <form class="form" action="/store" method="POST">
         @csrf
+
+        <!-- 隠しフィールドでフォームデータを保持 -->
+        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
+        <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
+        <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
+        <input type="hidden" name="email" value="{{ $contact['email'] }}">
+        <input type="hidden" name="area-code" value="{{ $contact['area-code'] }}">
+        <input type="hidden" name="first_part" value="{{ $contact['first_part'] }}">
+        <input type="hidden" name="second_part" value="{{ $contact['second_part'] }}">
+        <input type="hidden" name="address" value="{{ $contact['address'] }}">
+        <input type="hidden" name="building" value="{{ $contact['building'] }}">
+        <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
+        <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
+
+
+
+
         <div class="confirm-table">
           <table class="confirm-table__inner">
             <tr class="confirm-table__row">
@@ -58,7 +75,7 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">電話番号</th>
               <td class="confirm-table__text">
-                <input type="tel" name="tel" value="{{ $contact['tel'] ?? '' }}" readonly/>
+                <input type="tel" name="tel" value="{{ $contact['area-code'] ?? '' }}-{{ $contact['first_part'] ?? '' }}-{{ $contact['second_part'] ?? ''}}" readonly/>
               </td>
             </tr>
             <tr class="confirm-table__row">

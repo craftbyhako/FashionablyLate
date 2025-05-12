@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,10 @@ Route::post('/confirm', [IndexController::class, 'confirm']);
 
 Route::post('/store', [IndexController::class, 'store']);
 
+Route::get('/store', function () {
+    return redirect('/');
+});
+
 Route::get('/thanks', [IndexController::class, 'thanks']);
-//確認ページ、サンクスページ、管理画面、ユーザ登録ページ、ログインページ
-//Route::get('/confirm', [indexController::class, 'index']);
-//Route::get('/thanks', [indexController::class, 'index']);
-//Route::get('/admin', [indexController::class, 'index']);
-//Route::get('/register', [indexController::class, 'index']);
-//Route::get('/login', [indexController::class, 'index']);
+
+Route::get('/admin', [AdminController::class, 'index']);

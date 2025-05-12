@@ -98,7 +98,15 @@
               <input type="text" name="second_part" placeholder="5678" value="{{ old('second_part') }}" />
             </div>
             <div class="form__error">
-                 @error('tel')
+                @error('area-code')
+                {{ $message }}<br>
+                @enderror
+
+                @error('first_part')
+                {{ $message }}<br>
+                @enderror
+
+                @error('second_part')
                 {{ $message }}
                 @enderror
               <!--バリデーション機能を実装したら記述します。-->

@@ -27,26 +27,31 @@ class ContactRequest extends FormRequest
             //
             'last_name' => ['required', 'string', 'max:255'],
             'first_name' => ['required', 'string', 'max:255'],
-            'gender' => ['required'],
+            'gender' => ['required', 'in:1,2,3'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            'tel' => ['required', 'numeric', 'digits_between:1,5'],
+            'area-code' => ['required', 'digits_between:1,5'],
+            'first_part' => ['required', 'digits_between:1,5'],
+            'second_part' => ['required', 'digits_between:1,5'],
             'address' => ['required', 'string', 'max:255'],
             'category_id' => ['required'],
             'detail' => ['required', 'string', 'max:120'],
         ];
     }
 
-    public function message()
+    public function messages()
     {
         return [
-            'last_name.required' => '名を入力してください',
-            'first_name.required' => '姓を入力してください',
+            'last_name.required' => '姓を入力してください',
+            'first_name.required' => '名を入力してください',
             'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスはメール形式で入力してください',
-            'tel.required' => '電話番号を入力してください',
-            'tel.numeric' => '電話番号は5桁までの数字で入力してください',
-            'tel.digits_between' => '電話番号は5桁までの数字で入力してください',
+            'area-code.required' => '電話番号を入力してください',
+            'area-code.digits_between' => '電話番号は5桁までの数字で入力してください',
+            'first_part.required' => '電話番号を入力してください',
+            'first_part.digits_between' => '電話番号は5桁までの数字で入力してください',
+            'second_part.required' => '電話番号を入力してください',
+            'second_part.digits_between' => '電話番号は5桁までの数字で入力してください',
             'address.required' => '住所を入力してください',
             'category_id.required' => 'お問い合わせの種類を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',

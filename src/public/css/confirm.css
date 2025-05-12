@@ -17,29 +17,32 @@
 
 .confirm-table {
     border: 1px solid #ddd;
+    color: #8B7969;
 }
 
 .confirm-table__inner {
     width: 100%;
+    color: #8B7969;
 }
 
 .confirm-table__header {
     padding: 15px;
     width: 20%;
     border-bottom: 1px solid #ddd;
-    background-color: #eee;
+    background-color:#8B7969;
     font-weight: bold;
 }
 
 .confirm-table__text {
     padding: 15px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #8B7969;
 }
 
 .confirm-table__text input {
     width: 100%;
     outline: none;
     border: none;
+    color: #8B7969;
 }
 
 .confirm-table__row:last-child .confirm-table__header,
