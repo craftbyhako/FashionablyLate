@@ -1,36 +1,43 @@
 /* 基本的なリセット */
-* {
-    margin: 0;
+.login__content {
     padding: 0;
     box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #F1ECE7;
+    /* position: fixed;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; */
 }
 
-/* ボディの背景色と中央寄せ */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 /* ログインフォームのスタイル */
 form {
     background-color: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C5B9B0;
     width: 100%;
     max-width: 400px;
 }
 
 /* タイトルのスタイル */
-h1 {
+h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #8B7969;
+}
+
 
 /* 入力フィールド */
 input[type="email"],
@@ -52,7 +59,7 @@ ul {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50;
+    background-color:#8B7969;
     border: none;
     border-radius: 4px;
     color: white;

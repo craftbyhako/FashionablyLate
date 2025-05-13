@@ -22,7 +22,7 @@
     </div>
   @endif
 
-  <form method="POST" action="{{ route('login') }}">
+  <form class="form" method="POST" action="{{ route('login') }}">
     @csrf
     <label for="email">メールアドレス</label>
     <input type="email" name="email" placeholder="メールアドレス" required><br>

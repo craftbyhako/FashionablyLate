@@ -16,6 +16,19 @@
         <div class="header__inner">
             <a class="header__logo" href="/">FashionablyLate
             </a>
+            <nav class="header__nav">
+            @if (Auth::check())
+                <!-- ログイン中: Logoutボタン -->
+                <form class="form" method="POST" action="{{ route('logout') }}" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="nav__button">Logout</button>
+                </form>
+            @else
+                <!-- 未ログイン: Login/Register -->
+                <a href="{{ route('login') }}" class="nav__button">Login</a>
+                <a href="{{ route('register') }}" class="nav__button">Register</a>
+            @endif
+        </nav>
         </div>
     </header>
 
