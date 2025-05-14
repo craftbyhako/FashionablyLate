@@ -18,7 +18,7 @@
         <div class="thanks__content">
             <p class="thanks__message">お問い合わせありがとうございました</p>
             <div class="form__button">
-                <button class="form__button-submit" type="button" onclick="redirectHome()">HOME</button>
+                <a href="/" class="form__button-submit">HOME</a>
             </div>
         </div>
     </div>

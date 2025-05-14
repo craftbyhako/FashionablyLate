@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">FashionablyLate
+            <a class="header__logo" href="{{ url('/') }}">FashionablyLate
             </a>
             <nav class="header__nav">
             @if (Auth::check())

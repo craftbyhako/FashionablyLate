@@ -1,6 +1,9 @@
 .contact-form__content {
     margin-top: 100px;
     /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .contact-form__heading {
@@ -9,17 +12,24 @@
     font-family: 'Inika';
 }
 
+.contact-form {
+    width: fit-content;
+}
+
+
+
 .form__group-title {
     display: flex;
     align-items: center;
     /* 縦方向の中央揃え */
+    
 }
 
 .form__label--item {
     margin-right: 8px;
     line-height: 26px;
     color: #8B7969;
-    /* 「お名前」と「※」の間にスペースを作る */
+
 }
 
 .form__label--required{
@@ -63,4 +73,65 @@ label, .category__group {
         /* 入力フィールドの内側にスペース */
     border: 1px solid #ccc;
         /* 入力フィールドの枠線 */
+}
+
+textarea {
+    /* position: absolute; */
+    width: 279.47px;
+    height: 26px;
+    /* left: 282.22px; */
+    /* top: 732px; */
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+        /* ボックスの高さと同一 */
+    color: #8B7969;
+}
+
+input::placeholder {
+    color: #8B7969;
+}
+
+select.category__group option[disabled] {
+    color: #8B7969;
+}
+
+.form__button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 40px;
+    gap: 10px;
+    position: absolute;
+    width: 160px;
+    height: 46px;
+    left: 50%;
+    top: 700px;
+    background: #82756A;
+    border: none;
+}
+
+
+form__button-submit{
+    width: 80px;
+    height: 26px;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+        /* ボックスの高さと同一 */
+    color: #FFFFFF;
+    /* flex: none;
+    order: 0;
+    flex-grow: 0; */
+}
+
+.form__error {
+    color: red;
+    font-size: 14px;
+     /* 必要なら調整 */
+    margin-top: 5px;
+    display: block;
 }

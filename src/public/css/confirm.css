@@ -8,6 +8,9 @@
 .confirm__heading {
     margin-bottom: 40px;
     text-align: center;
+    margin-top: 90px;
+    color: #8B7969;
+    font-family: 'Inika';
 }
 
 .form {
@@ -27,10 +30,11 @@
 
 .confirm-table__header {
     padding: 15px;
-    width: 20%;
+    width: 30%;
     border-bottom: 1px solid #ddd;
     background-color:#8B7969;
     font-weight: bold;
+    color: #fff;
 }
 
 .confirm-table__text {
@@ -53,15 +57,20 @@
 .form__button {
     margin-top: 30px;
     text-align: center;
+    display: flex;
+        /* 横並びにする */
+    justify-content: center;
+        /* 中央寄せ */
+        gap: 20px;
 }
 
-.form__button-submit {
+.form__button-submit, .form__button-correction {
     padding: 10px;
-    width: 30%;
+    width: auto;
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #000;
+    background: #82756A;
     color: #fff;
     cursor: pointer;
 }
