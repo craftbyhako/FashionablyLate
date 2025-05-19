@@ -16,7 +16,7 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             //外部キー 親：カテゴリーテーブル
-            $table->foreignId('name')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->string('first_name', 255);
             $table->string('last_name', 255);
             $table->tinyInteger('gender'); $table->string('email', 255);
